@@ -1,24 +1,53 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Bauhas';
+  src: url('../../public/fonts/bauhas_lt(RUS BY LYAJKA).ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-text: #1e191d;
+  --color-text-hover: #f6ca7a;
+  --color-text-active: #ff9951;
+
+  --color-border: #1e191d;
+  --color-border-hover: #f6ca7a;
+  --color-border-active: #ff9951;
+
+  --color-background: #fff;
+
+  --font-bauhas: 'Bauhas', sans-serif;
+
+  --breakpoint-3xs: 16rem;
+  --breakpoint-2xs: 18rem;
+  --breakpoint-xs: 20rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 140rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
+@theme {
+  --color-text: var(--color-text);
+  --color-text-hover: var(--color-text-hover);
+  --color-text-active: var(--color-text-active);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+  --color-border-active: var(--color-border-active);
+
+  --color-background: var(--color-background);
+
+  --breakpoint-3xs: 16rem;
+  --breakpoint-2xs: 18rem;
+  --breakpoint-xs: 20rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 140rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'raleway', sans-serif;
 }
